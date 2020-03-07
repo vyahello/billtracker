@@ -6,6 +6,8 @@
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
+[![Build Status](https://travis-ci.org/vyahello/billtracker.svg?branch=master)](https://travis-ci.org/vyahello/billtracker)
+[![Coverage Status](https://coveralls.io/repos/github/vyahello/billtracker/badge.svg?branch=master)](https://coveralls.io/github/vyahello/billtracker?branch=master)
 [![Stars](https://img.shields.io/github/stars/vyahello/billtracker)](https://github.com/vyahello/billtracker/stargazers)
 [![Forks](https://img.shields.io/github/forks/vyahello/billtracker)](https://github.com/vyahello/billtracker/network/members)
 [![Issues](https://img.shields.io/github/issues/vyahello/billtracker)](https://github.com/vyahello/billtracker/issues)
