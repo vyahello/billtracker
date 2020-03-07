@@ -14,7 +14,7 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/watchers/)
 [![GitHub contributors](https://img.shields.io/github/contributors/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/contributors/)
 
-# Bill tracker
+# Bill tracker pro
 
 > A tool to track your bills built with **pyramid** web framework.
 
@@ -30,9 +30,34 @@
 
 ## Usage
 
+Please run following command from the root of a project:
+```bash
+➜ pserve production.ini
+Serving on http://0.0.0.0:6543
+...
+```
+
+After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
+
 ### Installation
 
+Please run following script to obtain latest package from PYPI:
+
+```bash
+➜ pip install billtracker-pro
+```
+
 ### Source code
+
+To be able to use plugin from the source code please execute commands below:
+
+```bash
+➜ git clone git@github.com:vyahello/billtracker.git
+➜ python setup.py develop
+➜ pserve development.ini
+Serving on http://localhost:6543
+...
+```
 
 ## Development notes
 

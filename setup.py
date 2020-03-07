@@ -40,7 +40,7 @@ def __changelog() -> str:
 
 def __long_description() -> str:
     """Returns project long description."""
-    return f'{__readme()}\n\n{__changelog()}'
+    return f"{__readme()}\n\n{__changelog()}"
 
 
 def __requirements() -> Sequence[str]:
@@ -74,5 +74,5 @@ if __name__ == "__main__":
         zip_safe=False,
         extras_require={"testing": __requirements_for_development()},
         install_requires=__requirements(),
-        entry_points={"paste.app_factory": ["main = billtracker:main"]},
+        entry_points={"paste.app_factory": ("main = billtracker:main",)},
     )
