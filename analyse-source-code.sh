@@ -15,7 +15,7 @@ remove-pycache() {
 :<<DOC
     Removes python cache directories
 DOC
-    ( find . -d -name __pycache__ | xargs rm -r )
+    ( find . -depth -name __pycache__ | xargs rm -r )
 }
 
 
@@ -47,7 +47,7 @@ check-flake() {
 :<<DOC
     Runs "flake8" code analysers
 DOC
-    check-flake8 && check-flakehell
+    check-flake8
 }
 
 
