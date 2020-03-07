@@ -1,2 +1,6 @@
 pyramid==1.10.4
+plaster-pastedeploy==0.7
+pyramid_chameleon==0.3
+pyramid_debugtoolbar==4.6.1
+waitress==1.4.3
 cookiecutter==1.7.0
