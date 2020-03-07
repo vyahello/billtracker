@@ -1,13 +1,16 @@
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Checked with pylint](https://img.shields.io/badge/pylint-checked-blue)](https://www.pylint.org)
 [![Checked with flake8](https://img.shields.io/badge/flake8-checked-blue)](http://flake8.pycqa.org/)
+[![Checked with pydocstyle](https://img.shields.io/badge/pydocstyle-checked-yellowgreen)](http://www.pydocstyle.org/)
+[![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![Forks](https://img.shields.io/github/forks/vyahello/billtracker)](https://github.com/vyahello/billtracker/network/members)
 [![Stars](https://img.shields.io/github/stars/vyahello/billtracker)](https://github.com/vyahello/billtracker/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
 # Bill tracker
 
-> A tool to track your bills built with **_pyramid_** web framework.
+> A tool to track your bills built with **pyramid** web framework.
 
 ## Tools
 - python 3.6 | 3.7 | 3.8
@@ -15,6 +18,8 @@
 - code analysis
   - [pytest](https://pypi.org/project/pytest/)
   - [black](https://black.readthedocs.io/en/stable/)
+  - [mypy](http://mypy.readthedocs.io/en/latest)
+  - [pylint](https://www.pylint.org/)
   - [flake8](http://flake8.pycqa.org/en/latest/)
 
 ## Usage
