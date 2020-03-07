@@ -4,9 +4,13 @@
 [![Checked with flake8](https://img.shields.io/badge/flake8-checked-blue)](http://flake8.pycqa.org/)
 [![Checked with pydocstyle](https://img.shields.io/badge/pydocstyle-checked-yellowgreen)](http://www.pydocstyle.org/)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
-[![Forks](https://img.shields.io/github/forks/vyahello/billtracker)](https://github.com/vyahello/billtracker/network/members)
-[![Stars](https://img.shields.io/github/stars/vyahello/billtracker)](https://github.com/vyahello/billtracker/stargazers)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
+
+[![Stars](https://img.shields.io/github/stars/vyahello/billtracker)](https://github.com/vyahello/billtracker/stargazers)
+[![Forks](https://img.shields.io/github/forks/vyahello/billtracker)](https://github.com/vyahello/billtracker/network/members)
+[![Issues](https://img.shields.io/github/issues/vyahello/billtracker)](https://github.com/vyahello/billtracker/issues)
+[![GitHub watchers](https://img.shields.io/github/watchers/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/watchers/)
+[![GitHub contributors](https://img.shields.io/github/contributors/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/contributors/)
 
 # Bill tracker
 

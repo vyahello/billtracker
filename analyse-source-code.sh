@@ -63,7 +63,15 @@ check-mypy() {
 :<<DOC
     Runs "mypy" code analyser
 DOC
-    --check-box "mypy" && ( mypy --package "${PACKAGE}" )
+    --entry-point-box "mypy" && ( mypy --package "${PACKAGE}" )
+}
+
+
+check-docstrings() {
+:<<DOC
+     Runs "pydocstyle" static documentation code style formatter
+DOC
+    --entry-point-box "pydocstyle" && ( pydocstyle --explain --count ${PACKAGE} )
 }
 
 
@@ -79,8 +87,15 @@ main() {
 :<<DOC
     Runs "main" code analyser
 DOC
-    remove-pycache
-    check-black && check-flake && check-mypy && check-pylint && check-unittests
+    (
+      remove-pycache
+      check-black && \
+      check-flake && \
+      check-mypy && \
+      check-pylint && \
+      check-docstrings && \
+      check-unittests
+    )
 }
 
 
