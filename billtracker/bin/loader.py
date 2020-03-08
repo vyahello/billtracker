@@ -2,12 +2,13 @@
 import json
 import os
 import random
-from typing import List, Dict, Any, IO
+from typing import List, Dict, Any, IO, Iterable
 import dateutil.parser
 from sqlalchemy.orm import Session
 from billtracker.data.session import DatabaseSession
 from billtracker.data.models.bill import Bill
 from billtracker.data.models.users import User
+from billtracker.bin import type
 
 _JsonType = List[Dict[Any, Any]]
 
@@ -33,29 +34,39 @@ def _load_from_json(name: str) -> _JsonType:
         return json.load(stream)
 
 
+def _loaded_users() -> Iterable[type.User]:
+    """Returns loaded iterable of users."""
+    return map(lambda record: type.User(**record), _load_from_json("USERS.json"))
+
+
+def _loaded_payments() -> Iterable[type.Payment]:
+    """Returns loaded iterable of payments."""
+    return map(lambda record: type.Payment(**record), _load_from_json("PAYMENT.json"))
+
+
 def _users_from_session(session: Session) -> List[User]:
     """Returns a list of users from a session."""
     users: List[User] = []
-    for record in _load_from_json("USERS.json"):  # type: Dict[str, Any]
+    for user_record in _loaded_users():  # type: type.User
         user: User = User()
         users.append(user)
-        user.email = record["email"]
-        user.name = record["name"]
-        user.created_date = dateutil.parser.parse(record["created_date"])
-        user.last_login = dateutil.parser.parse(record["last_login"])
-        user.last_login = dateutil.parser.parse(record["last_login"])
-        user.hashed_password = record["hashed_password"]
+        user.email = user_record.email
+        user.name = user_record.name
+        user.created_date = dateutil.parser.parse(user_record.created_date)
+        user.last_login = dateutil.parser.parse(user_record.last_login)
+        user.last_login = dateutil.parser.parse(user_record.last_login)
+        user.hashed_password = user_record.hashed_password
         session.add(user)
     return users
 
 
 def _include_bills(users: List[User]) -> None:
     """Adds users bills."""
-    for record in _load_from_json("PAYMENTS.json"):  # type: Dict[str, Any]
+    for payment in _loaded_payments():  # type: type.Payment
         user: User = random.choice(users)
         bill: Bill = Bill()
-        bill.created_date = dateutil.parser.parse(record["created_date"])
-        bill.description = record["description"]
-        bill.total = int(record["total"])
-        bill.paid = min(bill.total, int(record["paid"]))
+        bill.created_date = dateutil.parser.parse(payment.created_date)
+        bill.description = payment.description
+        bill.total = int(payment.total)
+        bill.paid = min(bill.total, int(payment.paid))
         user.bills.append(bill)
