@@ -7,14 +7,13 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 
 [![Build Status](https://travis-ci.org/vyahello/billtracker.svg?branch=master)](https://travis-ci.org/vyahello/billtracker)
-[![Coverage Status](https://coveralls.io/repos/github/vyahello/billtracker/badge.svg?branch=master)](https://coveralls.io/github/vyahello/billtracker?branch=master)
 [![Stars](https://img.shields.io/github/stars/vyahello/billtracker)](https://github.com/vyahello/billtracker/stargazers)
 [![Forks](https://img.shields.io/github/forks/vyahello/billtracker)](https://github.com/vyahello/billtracker/network/members)
 [![Issues](https://img.shields.io/github/issues/vyahello/billtracker)](https://github.com/vyahello/billtracker/issues)
 [![GitHub watchers](https://img.shields.io/github/watchers/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/watchers/)
 [![GitHub contributors](https://img.shields.io/github/contributors/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/contributors/)
 
-# Bill tracker pro
+# Bills tracker
 
 > A tool to track your bills built with **pyramid** web framework.
 
@@ -44,7 +43,7 @@ After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app
 Please run following script to obtain latest package from PYPI:
 
 ```bash
-➜ pip install billtracker-pro
+➜ pip install bills-tracker
 ```
 
 ### Source code

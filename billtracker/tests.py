@@ -1,31 +1,30 @@
+"""Module contains a list of functional tests."""
 import unittest
 from pyramid import testing
+from pyramid.config import Configurator
+from .views.default import home
+from billtracker import main
+from webtest import TestApp
 
 
 class ViewTests(unittest.TestCase):
-    def setUp(self):
-        self.config = testing.setUp()
+    """Represents testcases on views."""
 
-    def tearDown(self):
+    def setUp(self):
+        self.config: Configurator = testing.setUp()
+
+    def tearDown(self) -> None:
         testing.tearDown()
 
-    def test_my_view(self):
-        from .views.default import home
-
-        request = testing.DummyRequest()
-        info = home(request)
-        self.assertEqual(info["project"], "Bill Tracker Pro")
+    def test_my_view(self) -> None:
+        self.assertEqual(home(testing.DummyRequest())["project"], "Bills Tracker")
 
 
 class FunctionalTests(unittest.TestCase):
+    """Represents functional testcases."""
+
     def setUp(self):
-        from billtracker import main
-
-        app = main({})
-        from webtest import TestApp
-
-        self.testapp = TestApp(app)
+        self.app: TestApp = TestApp(main({}))
 
     def test_root(self):
-        res = self.testapp.get("/", status=200)
-        self.assertTrue(b"Pyramid" in res.body)
+        self.assertTrue(b"Pyramid" in self.app.get("/", status=200).body)

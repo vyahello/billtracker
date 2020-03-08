@@ -47,7 +47,7 @@ check-flake() {
 :<<DOC
     Runs "flake8" code analysers
 DOC
-    check-flake8
+    check-flake8 && check-flakehell
 }
 
 
@@ -90,7 +90,6 @@ DOC
     (
       remove-pycache
       check-black && \
-      check-flake && \
       check-mypy && \
       check-pylint && \
       check-docstrings && \
