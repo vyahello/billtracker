@@ -1,22 +1,21 @@
+"""Module contains a set of methods to operate users."""
 import datetime
 from typing import List
-import sqlalchemy
-from sqlalchemy import orm
+from sqlalchemy import orm, Column, Integer, String, DateTime
 from billtracker.data.model import SqlAlchemyBase
 from billtracker.data.models.bill import Bill
 
 
 class User(SqlAlchemyBase):
+    """Represents user data model type."""
+
     __tablename__: str = "users"
-
-    id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
-    name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    email = sqlalchemy.Column(sqlalchemy.String, index=True, nullable=True)
-    hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True, index=True)
-    created_date = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now, index=True)
-    last_login = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now, index=True)
-
-    # noinspection PyUnresolvedReferences
+    id: Column = Column(Integer, primary_key=True, autoincrement=True)
+    name: Column = Column(String, nullable=True)
+    email: Column = Column(String, index=True, nullable=True)
+    hashed_password: Column = Column(String, nullable=True, index=True)
+    created_date: Column = Column(DateTime, default=datetime.datetime.now, index=True)
+    last_login: Column = Column(DateTime, default=datetime.datetime.now, index=True)
     bills: List[Bill] = orm.relation("Bill", order_by=Bill.created_date.desc(), back_populates="user")
 
     @property

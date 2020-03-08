@@ -1,12 +1,15 @@
+"""Module contains a set of methods to operate loaders."""
 import json
 import os
 import random
-from typing import List, Dict, Any
+from typing import List, Dict, Any, IO
 import dateutil.parser
 from sqlalchemy.orm import Session
 from billtracker.data.session import DatabaseSession
 from billtracker.data.models.bill import Bill
 from billtracker.data.models.users import User
+
+_JsonType = List[Dict[Any, Any]]
 
 
 def load_starter() -> None:
@@ -19,42 +22,40 @@ def load_starter() -> None:
         return
 
     session.expire_on_commit = False
-    users: List[User] = add_users(session)
-    add_bills(users)
+    _include_bills(_users_from_session(session))
     session.commit()
     session.close()
 
 
-def add_users(session: Session) -> List[User]:
-    """Adds a list of users."""
+def _load_from_json(name: str) -> _JsonType:
+    """Converts json file content into dictionary format."""
+    with open(os.path.join(DatabaseSession.folder, name), encoding="utf-8") as stream:  # type: IO[str]
+        return json.load(stream)
+
+
+def _users_from_session(session: Session) -> List[User]:
+    """Returns a list of users from a session."""
     users: List[User] = []
-    with open(os.path.join(DatabaseSession.folder, "USERS.json"), "r", encoding="utf-8") as stream:
-        data: List[Dict[str, Any]] = json.load(stream)
-
-    for record in data:  # type: Dict[str, Any]
-        user = User()
+    for record in _load_from_json("USERS.json"):  # type: Dict[str, Any]
+        user: User = User()
         users.append(user)
-        user.email = record.get("email")
-        user.name = record.get("name")
-        user.created_date = dateutil.parser.parse(record.get("created_date"))
-        user.last_login = dateutil.parser.parse(record.get("last_login"))
-        user.last_login = dateutil.parser.parse(record.get("last_login"))
-        user.hashed_password = record.get("hashed_password")
+        user.email = record["email"]
+        user.name = record["name"]
+        user.created_date = dateutil.parser.parse(record["created_date"])
+        user.last_login = dateutil.parser.parse(record["last_login"])
+        user.last_login = dateutil.parser.parse(record["last_login"])
+        user.hashed_password = record["hashed_password"]
         session.add(user)
-
     return users
 
 
-def add_bills(users: List[User]) -> None:
+def _include_bills(users: List[User]) -> None:
     """Adds users bills."""
-    with open(os.path.join(DatabaseSession.folder, "PAYMENTS.json"), encoding="utf-8") as stream:
-        data: List[Dict[str, Any]] = json.load(stream)
-
-    for record in data:  # type: Dict[str, Any]
-        user = random.choice(users)
-        bill = Bill()
-        bill.created_date = dateutil.parser.parse(record.get("created_date"))
-        bill.description = record.get("description")
-        bill.total = int(record.get("total"))
-        bill.paid = min(bill.total, int(record.get("paid")))
+    for record in _load_from_json("PAYMENTS.json"):  # type: Dict[str, Any]
+        user: User = random.choice(users)
+        bill: Bill = Bill()
+        bill.created_date = dateutil.parser.parse(record["created_date"])
+        bill.description = record["description"]
+        bill.total = int(record["total"])
+        bill.paid = min(bill.total, int(record["paid"]))
         user.bills.append(bill)

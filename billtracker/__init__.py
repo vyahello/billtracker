@@ -12,7 +12,7 @@ from billtracker.data.session import DatabaseSession
 
 def init_database() -> None:
     """Initialize database model."""
-    DatabaseSession.global_init(
+    DatabaseSession.initialize(
         os.path.join(os.path.abspath(os.path.dirname(__file__)), "storage", "bill_tracker.sqlite")
     )
     loader.load_starter()

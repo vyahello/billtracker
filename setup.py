@@ -49,7 +49,7 @@ def __requirements() -> Sequence[str]:
 
 
 def __requirements_for_development() -> Sequence[str]:
-    """Returns requirements sequence."""
+    """Returns development requirements sequence."""
     return __iterable_from_file("requirements-dev.txt")
 
 
