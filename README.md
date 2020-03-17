@@ -40,11 +40,7 @@ After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app
 
 ### Installation
 
-Please run following script to obtain latest package from PYPI:
-
-```bash
-➜ pip install bills-tracker
-```
+Obtain latest package from PYPI (TBD)
 
 ### Source code
 

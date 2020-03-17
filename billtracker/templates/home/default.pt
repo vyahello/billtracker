@@ -1,10 +1,8 @@
 <div metal:use-macro="load: ../shared/layout.pt">
     <div metal:fill-slot="content">
-
         <div id="hero">
-            <h1><span class="font-semi-bold">Bill Tracker </span><span class="smaller">Stats</span></h1>
+            <h1><span class="font-semi-bold">Bill Tracker </span> <span class="smaller">Stats</span></h1>
         </div>
-
 
         <div class="container">
             <div class="row">
@@ -40,15 +38,12 @@
                 <div class="col-md-1 values">${bill.created_date.date().isoformat()}</div>
                 <div class="col-md-1 amount values">${"${:,.0f}".format(bill.total)}</div>
                 <div class="col-md-1 amount values">${"${:,.0f}".format(bill.total-bill.paid)}</div>
-                <div class="col-md-1 values">
-                        ${bill.description}
-                </div>
+                <div class="col-md-1 values">${bill.description}</div>
                 <div class="col-md-2 values">
                     <a href="/bill/${bill.id}" class="btn btn-success btn-sm">Make payment</a>
                 </div>
                 <div class="col-md-4 filler"></div>
             </div>
-
 
             <div class="row">
                 <div class="col-md-2"></div>
@@ -69,15 +64,11 @@
                 <div class="col-md-2 filler"></div>
                 <div class="col-md-1 values">${bill.created_date.date().isoformat()}</div>
                 <div class="col-md-1 amount values">${"${:,.0f}".format(bill.total)}</div>
-                <div class="col-md-2 values">
-                        ${bill.description}
+                <div class="col-md-2 values"> ${bill.description}
                 </div>
                 <div class="col-md-6 filler"></div>
             </div>
-
         </div>
-
         <div id="eop"> &nbsp;</div>
-
     </div>
 </div>

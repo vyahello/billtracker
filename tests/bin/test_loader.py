@@ -15,4 +15,4 @@ def test_file_users(file: _LoaderFile) -> None:
 
 @unittest
 def test_file_payment(file: _LoaderFile) -> None:
-    assert file.payment == "PAYMENT.json"
+    assert file.payment == "PAYMENTS.json"
