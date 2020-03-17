@@ -1,9 +1,11 @@
 """Module to contain not found views."""
-from typing import Dict, Union, List
+from pyramid.request import Request
 from pyramid.view import view_config
+from data.repository import user_by_id
 
 
-@view_config(route_name="home", renderer="../templates/home/default.pt")
-def home(_) -> Dict[str, Union[str, List[str]]]:
-    """Returns home page for `Bills Tracker` tool."""
-    return {"project": "Bills Tracker", "items": ["item1", "item2", "item3", "item4"]}
+@view_config(route_name='home', renderer='../templates/home/default.pt')
+def home(_: Request):
+    return {
+        'user': user_by_id(1),
+    }

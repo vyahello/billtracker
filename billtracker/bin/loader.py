@@ -40,7 +40,7 @@ class _LoaderFile:
     """Represents data files holder."""
 
     users: str = "USERS.json"
-    payment: str = "PAYMENT.json"
+    payment: str = "PAYMENTS.json"
 
 
 class _Loader:
