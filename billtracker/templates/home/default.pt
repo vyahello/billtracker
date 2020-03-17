@@ -7,5 +7,12 @@
                 application generated&nbsp;by<br><span class="font-normal">Cookiecutter</span>.</p>
         </div>
 
+        <p>Your items</p>
+        <ol>
+            <li tal:repeat="i items">
+                ${i} is an item
+            </li>
+        </ol>
+
     </div>
 </div>

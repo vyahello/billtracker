@@ -60,6 +60,8 @@ Serving on http://localhost:6543
 
 ## Development notes
 
+Data from [storage](billtracker/storage) folder was generated using https://www.mockaroo.com 
+
 ### CI
 
 Project has Travis CI integration using [.travis.yml](.travis.yml) file thus code analysis (`black`, `pylint`, `flake8`, `mypy`, `pydocstyle`) and unittests (`pytest`) will be run automatically
