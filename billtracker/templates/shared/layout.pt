@@ -34,7 +34,7 @@
     <div metal:define-slot="content">No content</div>
 </div>
 
-<footer>
+<footer style="text-align: left">
     <div class="links">
         <i class="glyphicon glyphicon-cog icon-muted"></i><a
             href="https://github.com/vyahello/billtracker">Github

@@ -38,13 +38,15 @@ Serving on http://0.0.0.0:6543
 
 After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
 
+![Demo](usage.gif)
+
 ### Installation
 
 Obtain latest package from PYPI (TBD)
 
 ### Source code
 
-To be able to use plugin from the source code please execute commands below:
+To be able to use and launch app from the source code please execute commands below:
 
 ```bash
 ➜ git clone git@github.com:vyahello/billtracker.git
