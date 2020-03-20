@@ -1,3 +1,4 @@
+dataclasses==0.6
 pyramid==1.10.4
 plaster-pastedeploy==0.7
 pyramid_chameleon==0.3
