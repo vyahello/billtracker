@@ -38,11 +38,7 @@ Serving on http://0.0.0.0:6543
 
 After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
 
-![Demo](usage.gif)
-
-### Installation
-
-Obtain latest package from PYPI (TBD)
+![Demo](demo.gif)
 
 ### Source code
 
