@@ -2,7 +2,7 @@
 from typing import Dict, Any
 from pyramid.request import Request
 from pyramid.view import notfound_view_config
-from views import view
+from billtracker.views import view
 
 
 @notfound_view_config(renderer="../templates/errors/404.pt")
