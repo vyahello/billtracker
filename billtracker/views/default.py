@@ -7,21 +7,20 @@ from pyramid.view import view_config
 from billtracker.data.repository import user_by_id, bill_by_id, add_payment
 from billtracker.data.models.users import User
 from billtracker.data.models.bill import Bill
+from billtracker.views.models.default.index import IndexViewModel
 from billtracker.views import view
 
 _DetailsType = Union[Response, Dict[str, Any]]
 
 
 @view_config(route_name=view.route.home, renderer=view.renderer.default, request_method=view.request.get)
-def home(_: Request) -> Dict[str, Optional[User]]:
+def home(request: Request) -> Dict[str, Optional[User]]:
     """Returns home page content.
 
     Args:
-        _ (Request): user request, it is omitted as it is not used
+        request (Request): user request
     """
-    return {
-        "user": user_by_id(user_id=10),
-    }
+    return IndexViewModel(request, user_id=10).to_dict()
 
 
 @view_config(route_name=view.route.details, renderer=view.renderer.details, request_method=view.request.get)

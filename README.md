@@ -15,7 +15,7 @@
 
 # Bills tracker
 
-> A tool to track your bills built with **pyramid** web framework.
+> A web tool to track your bills built with **pyramid** web framework.
 
 ## Tools
 - python 3.6 | 3.7 | 3.8
@@ -31,9 +31,7 @@
 
 Please run following command from the root of a project:
 ```bash
-➜ pserve production.ini
-Serving on http://0.0.0.0:6543
-...
+pserve production.ini
 ```
 
 After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
@@ -45,11 +43,9 @@ After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app
 To be able to use and launch app from the source code please execute commands below:
 
 ```bash
-➜ git clone git@github.com:vyahello/billtracker.git
-➜ python setup.py develop
-➜ pserve development.ini
-Serving on http://localhost:6543
-...
+git clone git@github.com:vyahello/billtracker.git
+python setup.py develop
+pserve development.ini
 ```
 
 ## Development notes
@@ -63,7 +59,7 @@ after every made change to the repository.
 
 To be able to run code analysis, please execute command below:
 ```bash
-➜ ./analyse-source-code.sh
+./analyse-source-code.sh
 ```
 
 ### Release notes
@@ -72,7 +68,7 @@ Please check [changelog](CHANGELOG.md) file to get more details about actual ver
 
 ### Meta
 
-Author – Volodymyr Yahello
+Author – _Volodymyr Yahello_. Please check [AUTHORS](AUTHORS.md) file to see all contributors.
 
 Distributed under the `MIT` license. See [LICENSE](LICENSE.md) for more information.
 
