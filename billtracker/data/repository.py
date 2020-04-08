@@ -26,7 +26,7 @@ def bill_by_id(bill_id: int) -> Optional[Bill]:
         session.close()
 
 
-def add_payment(amount: float, bill_id: int) -> Optional[Bill]:
+def add_payment(amount: Optional[int], bill_id: int) -> Optional[Bill]:
     """Adds payment to a user account."""
     session: Session = DatabaseSession.create_session()
     session.expire_on_commit = False
