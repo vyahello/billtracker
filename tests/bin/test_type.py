@@ -1,6 +1,8 @@
-from pytest import fixture
+from pytest import fixture, mark
 from billtracker.bin.type import Payment, User
 from tests import unittest
+
+pytestmark = mark.unit
 
 
 @fixture(scope="module")

@@ -1,10 +1,10 @@
 """Module contains API to operate details route view model."""
 from typing import Optional
 from pyramid.request import Request
-from billtracker.data.repository import bill_by_id, user_by_id
+from billtracker.data import repository
 from billtracker.data.models.bill import Bill
 from billtracker.data.models.users import User
-from billtracker.views.models.base import ViewModel
+from billtracker.models.base import ViewModel
 
 
 class BillDetailsViewModel(ViewModel):
@@ -13,9 +13,9 @@ class BillDetailsViewModel(ViewModel):
     def __init__(self, request: Request, user_id: int) -> None:
         super().__init__(request)
         self.bill_id: int = int(request.matchdict.get("bill_id"))
-        self.bill: Optional[Bill] = bill_by_id(self.bill_id)
+        self.bill: Optional[Bill] = repository.bill_by_id(self.bill_id)
         self.user_id: int = user_id
-        self.user: Optional[User] = user_by_id(user_id)
+        self.user: Optional[User] = repository.user_by_id(user_id)
         self.amount: Optional[int] = None
 
     def validate(self) -> None:

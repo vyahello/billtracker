@@ -2,6 +2,8 @@ import enum
 import pytest
 from billtracker.views.point import _Renderer, _Route, _Request, Point, _Status
 
+pytestmark = pytest.mark.unit
+
 
 @pytest.fixture(scope="module")
 def point() -> Point:

@@ -6,8 +6,8 @@ from pyramid.response import Response
 from pyramid.view import view_config
 from billtracker.data.models.users import User
 from billtracker.views import view
-from billtracker.views.models.default.index import IndexViewModel
-from billtracker.views.models.default.details import BillDetailsViewModel
+from billtracker.models.default.index import IndexViewModel
+from billtracker.models.default.details import BillDetailsViewModel
 from billtracker.data.repository import add_payment
 
 _DetailsType = Union[Response, Dict[str, Any]]

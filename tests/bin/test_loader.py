@@ -1,6 +1,8 @@
-from pytest import fixture
+from pytest import fixture, mark
 from billtracker.bin.loader import _LoaderFile
 from tests import unittest
+
+pytestmark = mark.unit
 
 
 @fixture(scope="module")
