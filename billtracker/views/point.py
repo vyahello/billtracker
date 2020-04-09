@@ -31,6 +31,7 @@ class _Request:
 class _Status(Enum):
     """Represents status entry."""
 
+    SUCCESS: int = 200
     NOT_FOUND: int = 404
 
     @property

@@ -79,7 +79,7 @@ check-unittests() {
 :<<DOC
     Runs unittests using "pytest" framework
 DOC
-    --entry-point-box "unitests" && pytest
+    --entry-point-box "unitests" && pytest && python -m unittest
 }
 
 

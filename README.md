@@ -52,6 +52,18 @@ pserve development.ini
 
 Data from [storage](billtracker/storage) folder was generated using https://www.mockaroo.com 
 
+### Testing
+
+Please follow next command to execute **unit** tests:
+```bash
+pytest -m unit
+```
+
+Or **functional** tests, correspondingly:
+```bash
+python -m unittests
+```
+
 ### CI
 
 Project has Travis CI integration using [.travis.yml](.travis.yml) file thus code analysis (`black`, `pylint`, `flake8`, `mypy`, `pydocstyle`) and unittests (`pytest`) will be run automatically
