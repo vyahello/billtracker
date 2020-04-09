@@ -10,7 +10,7 @@ from billtracker.models.default.index import IndexViewModel
 from billtracker.models.default.details import BillDetailsViewModel
 from billtracker.data.repository import add_payment
 
-_DetailsType = Union[Response, Dict[str, Any]]
+DetailsType = Union[Response, Dict[str, Any]]
 
 
 @view_config(route_name=view.route.home, renderer=view.renderer.default, request_method=view.request.get)
@@ -24,7 +24,7 @@ def home(request: Request) -> Dict[str, Optional[User]]:
 
 
 @view_config(route_name=view.route.details, renderer=view.renderer.details, request_method=view.request.get)
-def bill_details(request: Request) -> _DetailsType:
+def bill_details(request: Request) -> DetailsType:
     """Returns bill details.
 
     Args:
@@ -37,7 +37,7 @@ def bill_details(request: Request) -> _DetailsType:
 
 
 @view_config(route_name=view.route.details, renderer=view.renderer.details, request_method=view.request.post)
-def pay_bills(request: Request) -> _DetailsType:
+def pay_bills(request: Request) -> DetailsType:
     """Make payments.
 
     Args:
