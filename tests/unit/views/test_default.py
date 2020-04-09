@@ -12,7 +12,7 @@ pytestmark = pytest.mark.unit
 def user() -> User:
     user: User = User()
     user.id = 72
-    user.bills = [Bill(), Bill(), Bill()]
+    user.bills = [Bill() for _ in range(3)]
     yield user
 
 

@@ -1,5 +1,5 @@
 import unittest
-from webtest import TestApp, TestResponse
+from webtest import TestApp as App, TestResponse as Response
 from billtracker import main
 from billtracker.views import view
 from billtracker.data.repository import user_by_id
@@ -7,10 +7,10 @@ from billtracker.data.repository import user_by_id
 
 class SiteTests(unittest.TestCase):
     def setUp(self) -> None:
-        self._app: TestApp = TestApp(main({}))
+        self._app: App = App(main({}))
 
     def test_root(self) -> None:
-        response: TestResponse = self._app.get("/", status=view.status.SUCCESS.code)
+        response: Response = self._app.get("/", status=view.status.SUCCESS.code)
         assert "Mitchael Aggiss" in response.text
         assert "Unpaid bills" in response.text
 
