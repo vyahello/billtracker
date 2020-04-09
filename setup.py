@@ -56,7 +56,7 @@ def __requirements_for_development() -> Sequence[str]:
 if __name__ == "__main__":
     setup(
         name="billtracker",
-        version="0.0",
+        version="0.1.1",
         description="A tool to track users bills",
         long_description=__long_description(),
         classifiers=(
