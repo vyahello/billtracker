@@ -19,7 +19,9 @@
 
 ## Tools
 - python 3.6 | 3.7 | 3.8
-- [pyramid](https://trypyramid.com/)
+- [pyramid](https://trypyramid.com/) web framework
+- [sqlalchemy](https://docs.sqlalchemy.org/en/13/orm/tutorial.html) database
+- [alembic](https://alembic.sqlalchemy.org/en/latest/) database migration
 - code analysis
   - [pytest](https://pypi.org/project/pytest/)
   - [black](https://black.readthedocs.io/en/stable/)

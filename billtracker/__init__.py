@@ -9,6 +9,10 @@ from pyramid.router import Router
 from billtracker.bin import loader
 from billtracker.data.session import DatabaseSession
 
+__author__: str = "Volodymyr Yahello"
+__email__: str = "vyahello@gmail.com"
+__version__: str = "0.1.2"
+
 
 def init_database() -> None:
     """Initialize database model."""

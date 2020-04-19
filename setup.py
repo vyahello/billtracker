@@ -2,6 +2,7 @@
 import os
 from typing import IO, Sequence
 from setuptools import setup, find_packages
+from billtracker import __author__, __email__, __version__, __name__ as __package_name__
 
 
 def __file_to_string(name: str) -> str:
@@ -55,8 +56,8 @@ def __requirements_for_development() -> Sequence[str]:
 
 if __name__ == "__main__":
     setup(
-        name="billtracker",
-        version="0.1.1",
+        name=__package_name__,
+        version=__version__,
         description="A tool to track users bills",
         long_description=__long_description(),
         classifiers=(
@@ -65,9 +66,8 @@ if __name__ == "__main__":
             "Topic :: Internet :: WWW/HTTP",
             "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
         ),
-        author="",
-        author_email="",
-        url="",
+        author=__author__,
+        author_email=__email__,
         keywords="web pyramid pylons",
         packages=find_packages(),
         include_package_data=True,

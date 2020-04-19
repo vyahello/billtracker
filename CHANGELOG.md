@@ -1,6 +1,10 @@
 Versions
 ========
 
+0.1.2 (2020-04-19)
+========
+- Implement database migrations with 'alembic'
+
 0.1.1 (2020-04-09)
 ========
 - Cover app with basic functional tests
