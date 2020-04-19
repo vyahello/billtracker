@@ -23,7 +23,7 @@ check-black() {
 :<<DOC
     Runs "black" code analyser
 DOC
-    --entry-point-box "black" && ( black --check ${PACKAGE} )
+    --entry-point-box "black" && ( black --check ./ )
 }
 
 

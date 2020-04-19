@@ -52,6 +52,17 @@ pserve development.ini
 
 Data from [storage](billtracker/storage) folder was generated using https://www.mockaroo.com 
 
+### Database migration
+
+For database migrations [alembic](https://alembic.sqlalchemy.org/en/latest/) package is used. Please follow [alembic.ini](alembic.ini) file for instructions.
+
+Once new changes were made to the database, please follow instructions below:
+```bash
+alembic revision --autogenerate -m "commit message"
+alembic upgrade head
+alembic current
+```
+
 ### Testing
 
 Please follow next command to execute **unit** tests:

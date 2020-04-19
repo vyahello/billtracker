@@ -11,6 +11,7 @@ class Bill(SqlAlchemyBase):
     __tablename__: str = "bills"
     id: Column = Column(Integer, primary_key=True, autoincrement=True)
     created_date: Column = Column(DateTime, default=datetime.datetime.now, index=True)
+    last_payment: Column = Column(DateTime, index=True, nullable=True)
     description: Column = Column(String, nullable=False)
     paid: Column = Column(Float, default=0, index=True)
     total: Column = Column(Float, default=0, index=True)
