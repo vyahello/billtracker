@@ -11,7 +11,7 @@ from billtracker.data.session import DatabaseSession
 
 __author__: str = "Volodymyr Yahello"
 __email__: str = "vyahello@gmail.com"
-__version__: str = "0.1.2"
+__version__: str = "0.1.3"
 
 
 def init_database() -> None:

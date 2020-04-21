@@ -1,6 +1,10 @@
 Versions
 ========
 
+0.1.3 (2020-04-21)
+========
+- Deploy app on remote linux server
+
 0.1.2 (2020-04-19)
 ========
 - Implement database migrations with 'alembic'
