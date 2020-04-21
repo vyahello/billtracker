@@ -8,3 +8,4 @@ cookiecutter==1.7.0
 sqlalchemy==1.3.13
 python-dateutil==2.8.1
 alembic==1.4.2
+attrs==19.3.0
