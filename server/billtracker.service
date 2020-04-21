@@ -1,5 +1,4 @@
-# configure micro WSGI (uWSGI)
-# runs system deamons on Linux
+# runs 'billtracker' system deamon on Linux
 [Unit]
 Description=uWSGI Bills Tracker server
 After=syslog.target

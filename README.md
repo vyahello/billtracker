@@ -31,14 +31,7 @@
 
 ## Usage
 
-Please run following command from the root of a project:
-```bash
-pserve production.ini
-```
-
-After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
-
-![Demo](demo.gif)
+Please use [138.68.249.217](http://138.68.249.217/) deployed endpoint.
 
 ### Source code
 
@@ -49,6 +42,10 @@ git clone git@github.com:vyahello/billtracker.git
 python setup.py develop
 pserve development.ini
 ```
+
+After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
+
+![Demo](demo.gif)
 
 ## Development notes
 
