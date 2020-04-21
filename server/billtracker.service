@@ -1,0 +1,17 @@
+# configure micro WSGI (uWSGI)
+# runs system deamons on Linux
+[Unit]
+Description=uWSGI Bills Tracker server
+After=syslog.target
+
+[Service]
+ExecStart=/webapps/venv/bin/uwsgi -H /webapps/venv --ini-paste /webapps/billtracker/production.ini
+RuntimeDirectory=/webapps/billtracker/
+Restart=always
+KillSignal=SIGQUIT
+Type=notify
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
