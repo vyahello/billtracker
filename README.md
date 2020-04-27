@@ -30,7 +30,6 @@
   - [sqlalchemy](https://docs.sqlalchemy.org/en/13/orm/tutorial.html) database
   - [alembic](https://alembic.sqlalchemy.org/en/latest/) database migration
   - [nginx](https://www.nginx.com/) web server
-  - [uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/) web interface
 - code analysis
   - [pytest](https://pypi.org/project/pytest/)
   - [black](https://black.readthedocs.io/en/stable/)

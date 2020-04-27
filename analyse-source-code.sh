@@ -3,7 +3,7 @@
 PACKAGE="billtracker"
 
 
---entry-point-box() {
+entry-point-box() {
 :<<DOC
     Provides pretty-printer check box
 DOC
@@ -23,7 +23,7 @@ check-black() {
 :<<DOC
     Runs "black" code analyser
 DOC
-    --entry-point-box "black" && ( black --check ./ )
+    entry-point-box "black" && ( black --check ./ )
 }
 
 
@@ -31,7 +31,7 @@ check-flake8() {
 :<<DOC
     Runs "flake8" code analysers
 DOC
-    --entry-point-box "flake" && ( flake8 ${PACKAGE} )
+    entry-point-box "flake" && ( flake8 ${PACKAGE} )
 }
 
 
@@ -39,7 +39,7 @@ check-flakehell() {
 :<<DOC
     Runs "flakehell" code analysers
 DOC
-    --entry-point-box "flakehell" && ( flakehell lint )
+    entry-point-box "flakehell" && ( flakehell lint )
 }
 
 
@@ -55,7 +55,7 @@ check-pylint() {
 :<<DOC
     Runs "pylint" code analyser
 DOC
-    --entry-point-box "pylint" && ( pylint $(find ./ -iname *.py) )
+    entry-point-box "pylint" && ( pylint $(find ./ -iname *.py) )
 }
 
 
@@ -63,7 +63,7 @@ check-mypy() {
 :<<DOC
     Runs "mypy" code analyser
 DOC
-    --entry-point-box "mypy" && ( mypy --package "${PACKAGE}" )
+    entry-point-box "mypy" && ( mypy --package "${PACKAGE}" )
 }
 
 
@@ -71,7 +71,7 @@ check-docstrings() {
 :<<DOC
      Runs "pydocstyle" static documentation code style formatter
 DOC
-    --entry-point-box "pydocstyle" && ( pydocstyle --explain --count ${PACKAGE} )
+    entry-point-box "pydocstyle" && ( pydocstyle --explain --count ${PACKAGE} )
 }
 
 
@@ -79,7 +79,7 @@ check-unittests() {
 :<<DOC
     Runs unittests using "pytest" framework
 DOC
-    --entry-point-box "unitests" && pytest && python -m unittest
+    entry-point-box "unitests" && pytest && python -m unittest
 }
 
 
@@ -95,6 +95,7 @@ DOC
       check-docstrings && \
       check-unittests
     )
+    return 0
 }
 
 
