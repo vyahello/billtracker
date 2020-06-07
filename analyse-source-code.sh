@@ -95,7 +95,6 @@ DOC
       check-docstrings && \
       check-unittests
     )
-    return 0
 }
 
 
