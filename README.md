@@ -20,6 +20,8 @@
 
 > A web tool to track your bills built with **pyramid** web framework.
 
+_**Note**: please take into account that it is built for demo purpose but not for actual usage._
+
 ## Tools
 - front-end
   - html5
