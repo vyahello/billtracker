@@ -15,6 +15,7 @@
 [![GitHub watchers](https://img.shields.io/github/watchers/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/watchers/)
 [![GitHub contributors](https://img.shields.io/github/contributors/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/contributors/)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/billtracker/badge)](https://www.codefactor.io/repository/github/vyahello/billtracker)
+[![Website](https://img.shields.io/website?url=http%3A%2F%2F138.68.249.217)](http://138.68.249.217)
 
 # Bills tracker
 
@@ -42,7 +43,7 @@ _**Note**: please take into account that it is built for demo purpose but not fo
 
 ## Usage
 
-Please use [138.68.249.217](http://138.68.249.217/) deployed endpoint.
+Please check [billstracker website](http://138.68.249.217/) endpoint.
 
 ### Source code
 
