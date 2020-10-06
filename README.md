@@ -83,7 +83,7 @@ pytest -m unit
 
 Or **functional** tests, correspondingly:
 ```bash
-python -m unittests
+python -m functional
 ```
 
 ### CI
