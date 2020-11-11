@@ -9,11 +9,6 @@
 [![Checked with pydocstyle](https://img.shields.io/badge/pydocstyle-checked-yellowgreen)](http://www.pydocstyle.org/)
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
-[![Stars](https://img.shields.io/github/stars/vyahello/billtracker)](https://github.com/vyahello/billtracker/stargazers)
-[![Forks](https://img.shields.io/github/forks/vyahello/billtracker)](https://github.com/vyahello/billtracker/network/members)
-[![Issues](https://img.shields.io/github/issues/vyahello/billtracker)](https://github.com/vyahello/billtracker/issues)
-[![GitHub watchers](https://img.shields.io/github/watchers/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/watchers/)
-[![GitHub contributors](https://img.shields.io/github/contributors/vyahello/billtracker.svg)](https://GitHub.com/vyahello/billtracker/graphs/contributors/)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/billtracker/badge)](https://www.codefactor.io/repository/github/vyahello/billtracker)
 [![Website](https://img.shields.io/website?url=http%3A%2F%2F138.68.249.217)](http://138.68.249.217)
 
@@ -62,6 +57,13 @@ After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app
 ## Development notes
 
 Data from [storage](billtracker/storage) folder was generated using https://www.mockaroo.com 
+
+### Troubleshooting
+
+In case of server reboot/restart please start `billtracker` service:
+```bash
+systemctl start billtracker
+```
 
 ### Database migration
 
@@ -112,7 +114,6 @@ You can reach out me at:
 * [https://www.linkedin.com/in/volodymyr-yahello-821746127](https://www.linkedin.com/in/volodymyr-yahello-821746127)
 
 ### Contributing
-
 I would highly appreciate any contribution and support. If you are interested to add your ideas into project please follow next simple steps:
 
 1. Clone the repository
