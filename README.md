@@ -19,22 +19,27 @@
 _**Note**: please take into account that it is built for demo purpose but not for actual usage._
 
 ## Tools
+
+### Production
+
 - front-end
   - html5
   - css3
 - back-end
-  - python 3.6 | 3.7 | 3.8
+  - python 3.6, 3.7, 3.8
   - [pyramid](https://trypyramid.com/) web framework
   - [sqlalchemy](https://docs.sqlalchemy.org/en/13/orm/tutorial.html) database
   - [alembic](https://alembic.sqlalchemy.org/en/latest/) database migration
   - [nginx](https://www.nginx.com/) web server
-- code analysis
-  - [pytest](https://pypi.org/project/pytest/)
-  - [black](https://black.readthedocs.io/en/stable/)
-  - [mypy](http://mypy.readthedocs.io/en/latest)
-  - [pylint](https://www.pylint.org/)
-  - [flake8](http://flake8.pycqa.org/en/latest/)
-  - [travis](https://travis-ci.org) CI
+
+### Development
+
+- [pytest](https://pypi.org/project/pytest/)
+- [black](https://black.readthedocs.io/en/stable/) 
+- [mypy](http://mypy.readthedocs.io/en/latest)
+- [pylint](https://www.pylint.org/)
+- [flake8](http://flake8.pycqa.org/en/latest/)
+- [travis](https://travis-ci.org) CI
 
 ## Usage
 
