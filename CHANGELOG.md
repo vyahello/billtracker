@@ -1,6 +1,10 @@
 Versions
 ========
 
+0.2.0 (2022-01-18)
+========
+- Provide docker runner
+
 0.1.3 (2020-04-21)
 ========
 - Deploy app on remote linux server

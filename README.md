@@ -51,6 +51,8 @@ Please check [billstracker website](http://138.68.249.217/) endpoint.
 docker run -it -p 6543:6543 vyahello/billstracker:0.1.0
 ```
 
+After please open [0.0.0.0:6543](http://localhost:6543) endpoint to open web app.
+
 ### Source code
 
 To be able to use and launch app from the source code please execute commands below:
