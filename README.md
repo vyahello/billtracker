@@ -10,7 +10,7 @@
 [![Checked with mypy](http://www.mypy-lang.org/static/mypy_badge.svg)](http://mypy-lang.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 [![CodeFactor](https://www.codefactor.io/repository/github/vyahello/billtracker/badge)](https://www.codefactor.io/repository/github/vyahello/billtracker)
-[![Website](https://img.shields.io/website?url=http%3A%2F%2F138.68.249.217)](http://138.68.249.217)
+[![Docker pulls](https://img.shields.io/docker/pulls/vyahello/billstracker.svg)](https://hub.docker.com/repository/docker/vyahello/billstracker)
 
 # Bills tracker
 
@@ -44,6 +44,12 @@ _**Note**: please take into account that it is built for demo purpose but not fo
 ## Usage
 
 Please check [billstracker website](http://138.68.249.217/) endpoint.
+
+### Docker run
+
+```bash
+docker run -it -p 6543:6543 vyahello/billstracker:0.1.0
+```
 
 ### Source code
 
