@@ -43,7 +43,7 @@ _**Note**: please take into account that it is built for demo purpose but not fo
 
 ## Usage
 
-Please check [billstracker website](http://138.68.249.217/) endpoint.
+Please check billstracker website via http://178.62.222.165:5007.
 
 ### Docker run
 
@@ -88,6 +88,10 @@ alembic revision --autogenerate -m "commit message"
 alembic upgrade head
 alembic current
 ```
+
+### Docker
+
+Please use the following [example notes](https://github.com/vyahello/pep8-checker#development-notes) to proceed with docker image provisioning.
 
 ### Testing
 
